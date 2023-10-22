@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Modifier Produit</title>
+</head>
+
+<style>
+  
+    .produit {
+    border: 1px solid #dee2e6;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 55%;
+    margin-left: 400px;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #080710;
+  perspective: 4000;
+  perspective-origin: 50% 0%;
+  text-align: center;
+}
+
+#oue {
+  color: #f5f5f5;
+    margin-top: 50px;
+  font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+</style>
+</html>
+<body>
+
+    <h1 class="text-center mb-4 " style="color: rgb(73, 44, 128);margin-top: 20px; width: 450px;margin-left: 700px; border: solid rgb(73, 44, 128) 3px; border-radius: 100px; padding: 4px; ">Modifier {{ produit.nom }}</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="nom" id="oue">Nom:</label>
+        <input type="text" id="nom" name="nom" value="{{ produit.nom }}" required>
+        <label for="quantite" id="oue">Quantité:</label>
+        <input type="number" id="quantite" name="quantite" value="{{ produit.quantite }}" required>
+        <label for="image" id="oue">Image:</label>
+        <input type="file" id="image" name="image">
+        <div class="produit"><img src="{{ url_for('static', filename=produit.image_path) }}" alt="Description">
+            <button type="submit">Confirmer la modification
+            </button>
+    </form>
+
+    </div>
+    
+</div>
+ <!-- Ajout de Bootstrap JS et Popper.js -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

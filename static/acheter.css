@@ -1,0 +1,53 @@
+body{
+    background-color: #080710;
+
+}
+
+#msg {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: #333;
+}
+
+#qt {
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #f5f5f5;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.produit {
+    border: 1px solid #f5f5f5;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+img {
+    display: block;
+    width: 500px;
+    margin: auto;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
